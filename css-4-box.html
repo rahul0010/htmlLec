@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Css - Boxes</title>
     <style>
+
         *{
             margin: 0;
             padding: 0;
         }
+
         .box
         {
             padding: 15px;
@@ -21,14 +23,15 @@
             background-position: bottom;
             /* height: 80vh;
             width: 50vw; */
-            min-width: 500px;
+            /* min-width: 500px;
             max-width: 900px;
             min-height: 500px;
-            max-height: 900px;
+            max-height: 900px; */
             margin: 35px;
             border-radius: 3px;
             box-shadow: 0 3px 8px rgba(0,0,0,.5);
         }
+
         /* .circle
         {
             height: 200px;
@@ -36,12 +39,52 @@
             border-radius: 200px;
             background-color: #000;
         } */
+        .box
+        {
+            height: 350px;
+            width: 350px;
+        }
+        .box1
+        {
+            position: relative;
+        }
+        .box2
+        {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100px !important;
+            width: 100px !important;
+            border-radius: 50%;
+            z-index: 9999 !important;
+        }
+        .area
+        {
+            height: 700px;
+            width: 100%;
+            background-color: #888;
+            position: relative;
+        }
+        .box3
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="box">
+    <!-- <div class="box">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur non illum quasi placeat, ea odit delectus sit et? Qui amet dignissimos cum consequuntur sed dolorem expedita fugiat tempore eos unde, facilis quae inventore veritatis illo fugit quidem sapiente error voluptatum atque. Suscipit iure explicabo ipsa magni cumque enim tempora mollitia recusandae cupiditate! Quos sed hic quae optio? Ea dicta molestiae, vitae ratione expedita autem nesciunt voluptatibus libero perspiciatis quis fuga ullam! Ullam inventore velit nihil consequuntur consequatur libero sapiente neque aliquid sequi laudantium ducimus, nam non esse voluptas perspiciatis cum. Saepe ullam nobis unde eum atque facilis totam. Neque dolorem, quibusdam repellendus ipsa vero, deserunt earum non debitis blanditiis iste at perspiciatis nisi, cupiditate ullam magnam officiis. Eaque minus, necessitatibus dolorum consequatur a facilis modi quibusdam molestiae exercitationem fugiat officia sint ipsam quos? Sunt quam aspernatur maxime harum odit culpa eum, repellat earum iste, molestias corporis recusandae eius similique. Id!
+    </div> -->
+    <div class="box box1">box 1</div>
+    <div class="box box2">box 2</div>
+    <div class="area">
+            <div class="box box3">box 3</div>
     </div>
+    
     <!-- <div class="circle">
         &nbsp;
     </div> -->
