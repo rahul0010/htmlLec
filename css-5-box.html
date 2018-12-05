@@ -12,7 +12,8 @@
             padding: 0;
         }
 
-        .box
+        .box,
+        .boxes
         {
             padding: 15px;
             text-align: justify;
@@ -43,35 +44,35 @@
         {
             height: 350px;
             width: 350px;
+            float: left;
         }
-        .box1
+        .clearfix
         {
-            position: relative;
+            clear: both;
         }
-        .box2
+        .boxes
         {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100px !important;
-            width: 100px !important;
-            border-radius: 50%;
-            z-index: 9999 !important;
+            height: 350px;
+            width: 350px;
         }
-        .area
+        .boxes1
         {
-            height: 700px;
-            width: 100%;
-            background-color: #888;
-            position: relative;
+            display: block;
         }
-        .box3
+        .inline-ex
         {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            margin: 0;
+            display: inline-block;
+            background-color: #ddd;
+            padding: 10px;
+        }
+        .boxes2
+        {
+            display: inline;
+            visibility: hidden;
+        }
+        .boxes3
+        {
+            display: none;
         }
     </style>
 </head>
@@ -81,10 +82,12 @@
     </div> -->
     <div class="box box1">box 1</div>
     <div class="box box2">box 2</div>
-    <div class="area">
-            <div class="box box3">box 3</div>
-    </div>
-    
+    <div class="box box3">box 3</div>
+    <div class="clearfix"></div>
+    <div class="boxes boxes1">box 1</div>
+    <span>Lorem ipsum dolor sit amet, <div class="inline-ex">consectetur adipisicing</div>  elit. Magnam laborum corrupti sunt atque voluptatibus rerum, minus iusto culpa ab. Quis recusandae cum id accusantium. Saepe eum expedita neque! Nostrum, minima.</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.  <div class="boxes boxes2">box 3</div> Beatae ipsum qui fugiat, repudiandae temporibus sapiente. Labore velit esse, voluptatem et perferendis quia ullam facilis exercitationem? Eum aspernatur obcaecati rem officia!</span>
+    <div class="boxes boxes3">box 1</div>
     <!-- <div class="circle">
         &nbsp;
     </div> -->
