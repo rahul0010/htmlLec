@@ -31,14 +31,15 @@
             width: 100%;
             display: block;
         }
-        .input__label
+        .input__group .input__label
         {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             display: block;
             text-transform: uppercase;
+            font-weight: 600;
         }
-        .input__text
+        .input__group .input__text
         {
             margin-top: 20px;
             /* background: none; */
@@ -128,6 +129,61 @@
             transform: translateY(2px) scale(1.05);
             box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
         }
+        .radio__group
+        {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        .radio__group .radio__button--group
+        {
+            display: inline-block;
+            width: 48%;
+        }
+        .radio__label
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .radio__label > span
+        {
+            display: inline-block;
+            margin-left: 15px;
+            transform: translateY(-50%);
+        }
+        .radio-button
+        {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 3px solid #222;
+            position: relative;
+        }
+        .radio-button::after
+        {
+            content: "";
+            height: 15px;
+            width: 15px;
+            background-color: #222;
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: all .2s;
+        }
+        .radio:checked  ~ .radio__label .radio-button::after
+        {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +191,20 @@
         <div class="input__group">
             <input type="text" class="input__text" id="name" placeholder="name" autocomplete="off" required>
             <label for="name" class="input__label">Name</label>
+        </div>
+        <div class="input__group">
+            <input type="date" class="input__text" id="date" placeholder="name" autocomplete="off" required>
+            <label for="date" class="input__label">Date</label>
+        </div>
+        <div class="radio__group">
+            <div class="radio__button--group">
+                <input type="radio" name="gender" id="male" class="radio" hidden>
+                <label for="male" class="radio__label"><div class="radio-button"></div> <span>Male</span></label>
+            </div>
+            <div class="radio__button--group">
+                <input type="radio" name="gender" id="female" class="radio" hidden>
+                <label for="female" class="radio__label"><div class="radio-button"></div><span>Female</span></label>
+            </div>
         </div>
         <button type="submit" value="Submit" class="btn">Submit</button>
     </form>
