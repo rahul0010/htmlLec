@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Media queries</title>
+    <style>
+        html
+        {
+            font-size: 62.5%;
+        }
+        body
+        {
+            background-color: rgb(124, 58, 58);
+        }
+        .box
+        {
+            height: 25rem;
+            width: 25rem;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            animation: animateBox 1s infinite;
+        }
+        @media only screen and (max-width: 48.5em)
+        {
+            html
+            {
+                font-size: 48.6%;
+            }
+            body
+            {
+                background-color: rgb(46, 114, 40);
+            }
+            .box
+            {
+                height: 25rem;
+                width: 25rem;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                animation: animateBox 2s 1s infinite;
+            }
+        }
+        @keyframes animateBox
+        {
+            0%
+            {
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
+            25%
+            {
+                transform: translate(-50%,-50%) rotate(90deg);
+            }
+            50%
+            {
+                transform: translate(-50%,-50%) rotate(180deg);
+            }
+            75%
+            {
+                transform: translate(-50%,-50%) rotate(270deg);
+            }
+            100%
+            {
+                transform: translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
